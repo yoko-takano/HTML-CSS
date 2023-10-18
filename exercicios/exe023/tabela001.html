@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table {
+            width: 400px;
+            border-collapse: collapse;
+            border: 5px solid red;
+        }
+        tr.linha {
+            background-color: grey;
+        }
+        td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+        td.dado {
+            color: red;
+        }
+        tr.amarelo {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>Minha Primeira Tabela</h1>
+<!-- 
+    HIERARQUIA DE TABELAS SIMPLES
+    TABLE = tabela
+        TABLE ROW = linha de tabela
+            TABLE HEADER = cabeçalho de tabela
+            TABLE DATA = dado de tabela
+-->    
+    <table>
+        <tr> <!-- Primeira Linha -->
+            <td>A1</td> <!-- Primeira Linha x Primeira Coluna -->
+            <td>B1</td> <!-- Primeira Linha x Segunda Coluna -->
+            <td>C1</td> <!-- Primeira Linha x Terceira Coluna -->
+        </tr>
+        <tr class="linha"> <!-- Segunda Linha -->
+            <td>A2</td> <!-- Segunda Linha x Primeira Coluna -->
+            <td>B2</td> <!-- Segunda Linha x Segunda Coluna -->
+            <td>C2</td> <!-- Segunda Linha x Terceira Coluna -->
+        </tr>
+        <tr class="amarelo"> <!-- Terceira Linha -->
+            <td>A3</td> <!-- Terceira Linha x Primeira Coluna -->
+            <td>B3</td> <!-- Terceira Linha x Segunda Coluna -->
+            <td>C3</td> <!-- Terceira Linha x Terceira Coluna -->
+        </tr>
+        <tr> <!-- Quarta Linha -->
+            <td>A4</td> <!-- Quarta Linha x Primeira Coluna -->
+            <td class="dado">B4</td> <!-- Quarta Linha x Segunda Coluna -->
+            <td>C4</td> <!-- Quarta Linha x Terceira Coluna -->
+        </tr>
+        <tr>
+            <td>A5</td>
+            <td>B5</td>
+        </tr>
+        <tr>
+            <td>A6</td>
+        </tr>
+    </table>
+</body>
+</html>
