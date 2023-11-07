@@ -1,0 +1,78 @@
+@charset "UTF-8";
+
+/* Todas as demais mídias */
+
+/* Typical Device Breakpoints
+    Pequenas telas: até 600px
+    Celular: de 600px até 768px
+    Tablet: de 768px até 992px
+    Desktop: de 992px até 1200px
+    TV: 1200px
+*/
+
+@media print { /* Impressão */
+    * {
+        font-family: 'Courier New', Courier, monospace;
+    }
+    body {
+        background-image: url(../imagens/back-print.jpg); 
+        /* Desnecessário, porque não imprime background-image */
+        
+    }
+    main {
+        width: 90vw;
+        border: 2px solid black;
+    }
+    main h1 {
+        text-shadow: none;
+        color: black;
+    }
+    main::after {
+        content: "Esta impressão foi feita através do site www.cursoevideo.com";
+        text-decoration: overline;
+    }
+    img#phone {display: none;}
+    img#tablet {display: none;}
+    img#print {display: block;}
+    img#pc {display: none;}
+    img#tv {display: none;}
+}
+
+/* Não tem para dispositos móveis (telas pequenas
+e celular) pq já foi feito Mobile First */
+
+@media screen and (min-width: 500px) and (max-width: 700px) { /* Tablet */
+    body {
+        background-image: url(../imagens/back-tablet.jpg);
+    }
+    img#phone {display: none;}
+    img#tablet {display: block;}
+    img#print {display: none;}
+    img#pc {display: none;}
+    img#tv {display: none;}
+}
+
+@media screen and (min-width: 700px) and (max-width: 1000px) { /* Desktop */
+    body {
+        background-image: url(../imagens/back-pc.jpg);
+    }
+    img#phone {display: none;}
+    img#tablet {display: none;}
+    img#print {display: none;}
+    img#pc {display: block;}
+    img#tv {display: none;}
+}
+
+@media screen and (min-width: 1000px) { /* Grandes Telas */
+    body {
+        background-image: url(../imagens/back-tv.jpg);
+    }
+    main {
+        width: 700px;
+    }
+    img#phone {display: none;}
+    img#tablet {display: none;}
+    img#print {display: none;}
+    img#pc {display: none;}
+    img#tv {display: block;}
+}
